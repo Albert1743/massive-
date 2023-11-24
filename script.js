@@ -101,8 +101,8 @@ let total = 0
 
 arr.sort((a, b) => a - b);
 
-for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
+for (let num = 0; num < arr.length; num++) {
+    total += arr[num];
 }
 
 console.log("Отсортированный массив:", arr);
