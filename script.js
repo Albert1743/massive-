@@ -76,35 +76,151 @@
 // console.log("Нечетные имена:", odd);
 
 
-let people = ["Shaxboz", "Alibek", "Bexruz", "Jaxongir", "Radmir", "Abdumanon", "Alsafir", "Hasan"];
-let even = [];
-let odd = [];
+// let people = ["Shaxboz", "Alibek", "Bexruz", "Jaxongir", "Radmir", "Abdumanon", "Alsafir", "Hasan"];
+// let even = [];
+// let odd = [];
 
-for (let item = 0; item < people.length; item++) {
-    let name = people[item];
-    let letterCount = name.length;
-    if (letterCount % 2 === 0) { 
-        even.push(name)
-    }  else {
-        odd.push(name)
+// for (let item = 0; item < people.length; item++) {
+//     let name = people[item];
+//     let letterCount = name.length;
+//     if (letterCount % 2 === 0) { 
+//         even.push(name)
+//     }  else {
+//         odd.push(name)
+//     }
+// }
+
+// console.log("Четные имена:", even);
+// console.log("Нечетные имена:", odd);
+
+
+
+
+// let arr = [2, 1, 1, 9, 22, 7, 38, 14, 24, 3, 6, 8, 10]
+// let total = 0
+
+// arr.sort((a, b) => a - b);
+
+// for (let num = 0; num < arr.length; num++) {
+//     total += arr[num];
+// }
+
+// console.log("Отсортированный массив:", arr);
+// console.log("Сумма всех чисел в массиве:", total);
+
+
+//                              LESSON 3 
+// let arr = ['john',false, [], {}, true, 12, [], 90, 'alex', 19, 'alibek', true, 21, {}]
+// let str = 0
+// let bool = 0
+// let num = 0
+// let obj = 0
+
+// arr.filter(item => {
+//     if (typeof (item) === "number") {
+//         num++
+//     } else if (typeof (item) === "string") {
+//         str++
+//     } else if (typeof (item) === "boolean") {
+//         bool++
+//     } else if (typeof (item) === "object") {
+//         obj++
+//     }
+// })
+
+// console.log(str, bool, num, obj);
+
+
+//                              LESSON 3 HOMEWORK
+let arr = [
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "delectus aut au`tem",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "quis ut nam facilis et officia qui",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "fugiat veniam minus",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "et porro tempora",
+
+        "completed": true 
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 7,
+        "title": "illo expedita consequatur quia in",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 8,
+        "title": "quo adipisci enim quam ut ab",
+        "completed": true
+    },
+    {
+        "userId": 1,
+
+        "id": 9,
+        "title": "molestiae perspiciatis ipsa",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 10,
+        "title": "illo est ratione doloremque quia maiores aut",
+        "completed": true
+    },
+]
+let a = {
+    count: 0,
+    arr: []
+}
+
+let b = {
+    count: 0,
+    arr: []
+}
+
+const completedFilter = (item) => {
+    if (item.completed) {
+        a.count++;
+        a.arr.push(item);
+    } else {
+        b.count++;
+        b.arr.push(item);
     }
-}
+};
 
-console.log("Четные имена:", even);
-console.log("Нечетные имена:", odd);
+arr.filter(completedFilter);
 
+console.log("Completed tasks (a):", a.arr);
+console.log("Number of completed tasks:", a.count);
 
-
-
-let arr = [2, 1, 1, 9, 22, 7, 38, 14, 24, 3, 6, 8, 10]
-let total = 0
-
-arr.sort((a, b) => a - b);
-
-for (let num = 0; num < arr.length; num++) {
-    total += arr[num];
-}
-
-console.log("Отсортированный массив:", arr);
-console.log("Сумма всех чисел в массиве:", total);
+console.log("Incomplete tasks (b):", b.arr);
+console.log("Number of incomplete tasks:", b.count);
 
