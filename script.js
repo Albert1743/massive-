@@ -529,3 +529,21 @@ let emails = {
     info: []
 }
 let other = []
+
+
+users.filter(item => {
+    let m = item.email.split('.').at(-1)
+
+    if (m === 'org') {
+        emails.org.push(item.email)
+    } else if (m === 'net') {
+        emails.net.push(item.email)
+    } else if (m === 'info') {
+        emails.info.push(item.email)
+    } else {
+        other.push(item.email)
+    }
+})
+
+console.log("org:", "net:", "info:", emails);
+console.log("Other emails:", other);
