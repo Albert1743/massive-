@@ -550,35 +550,132 @@
 
 
 //                      LESSON 5
-let Jaxongir = {
-    personal: {
-        name: "Jaxongir",
-        surname: "Abdulaev",
-        hands: 2,
-        legs: 4,
-        job: "Developer",
-        city: {
-            live: "Las Vegas",
-            sport:{
-                hobby: "MMA",
-            },
-        },
-        married: {
-            wife: true,
-            girlfriend: "Asalya"
-        },
+// let Jaxongir = {
+//     personal: {
+//         name: "Jaxongir",
+//         surname: "Abdulaev",
+//         hands: 2,
+//         legs: 4,
+//         job: "Developer",
+//         city: {
+//             live: "Las Vegas",
+//             sport:{
+//                 hobby: "MMA",
+//             },
+//         },
+//         married: {
+//             wife: true,
+//             girlfriend: "Asalya"
+//         },
+//     },
+//     stydy: {
+//         school: 33,
+//         grade: 11,
+//         language: "English",
+//         head: true,
+//         abroad: {
+//             wantToStaudy: "U.S.A"
+//         },
+//     },
+//     age: 17,
+//     year: 2006,
+//     sex: "male",
+//     birth: "3 september",
+// }
+
+
+
+//                           LESSON 5 HOMEWORK
+// let ask = prompt('Which car do you want to buy?').toLowerCase().trim()
+
+let cars = [{
+    BMW: {
+        compoany: "BMW",
+        model: "m5 competition",
+        price: 200000,
+        year: 2023,
+        details: {
+            driveUnit: "full",
+            color: "dark blue",
+            engineCapacity: "5",
+            horsePower: "885 л.с",
+            maxSpeed: "380 km/h",
+            acceleration: "0-100: 2,3 second",
+            supercharger: "Biturbo",
+            country: "Germany",
+        }
     },
-    stydy: {
-        school: 33,
-        grade: 11,
-        language: "English",
-        head: true,
-        abroad: {
-            wantToStaudy: "U.S.A"
-        },
+    Mercedes: {
+        compoany: "Mercedes",
+        model: "GT 63 S",
+        price: 180000,
+        year: 2022,
+        details: {
+            driveUnit: "full",
+            color: "grey",
+            engineCapacity: "4.4",
+            horsePower: "780 л.с",
+            maxSpeed: "360 km/h",
+            acceleration: "0-100: 3,2 second",
+            supercharger: "Twinturbo",
+            country: "Germany",
+        }
     },
-    age: 17,
-    year: 2006,
-    sex: "male",
-    birth: "3 september",
-}
+    Porsche: {
+        compoany: "Porsche",
+        model: "Taycan",
+        price: 165000,
+        year: 2020,
+        details: {
+            driveUnit: "full",
+            color: "white",
+            engineCapacity: "4",
+            horsePower: "755 л.с",
+            maxSpeed: "350 km/h",
+            acceleration: "0-100: 3,7 second",
+            supercharger: "Turbo",
+            country: "Germany",
+        }
+    },
+    Audi: {
+        compoany: "Audi",
+        model: "RS7",
+        price: 165000,
+        year: 2018,
+        details: {
+            driveUnit: "full",
+            color: "black",
+            engineCapacity: "4",
+            horsePower: "765 л.с",
+            maxSpeed: "350 km/h",
+            acceleration: "0-100: 3,5 second",
+            supercharger: "Twinturbo",
+            country: "Germany",
+        }
+    },
+    Lamborghini: {
+        compoany: "Lamborghini",
+        model: "Huracan",
+        price: 175000,
+        year: 2016,
+        details: {
+            driveUnit: "full",
+            color: "yellow",
+            engineCapacity: "4.4",
+            horsePower: "790 л.с",
+            maxSpeed: "360 km/h",
+            acceleration: "0-100: 3,1 second",
+            supercharger: "Twinturbo",
+            country: "Italy",
+        }
+    },
+}]
+
+let ask = +prompt('Max price')
+let fil = cars.filter(item => {
+    if(item.price <= ask) {
+        console.log(item);
+    }
+})
+
+console.log(cars);
